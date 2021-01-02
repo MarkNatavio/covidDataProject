@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
+//import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import Card from './Card';
 
@@ -49,7 +49,7 @@ function Show(props) {
         {/* Main */}
         <Grid item xs={12}>
           <Paper className={classes.lpaper}
-          style={{ backgroundImage: 'url(https://source.unsplash.com/user/erondu/1600x900)',
+          style={{ backgroundImage: 'url(https://www.wlrn.org/sites/wlrn/files/styles/x_large/public/202005/contact_tracing__1_.png)',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'}}>
           </Paper>
@@ -74,7 +74,7 @@ function Show(props) {
               Please help us decrease the spread of the virus and keeping yourself and others safe by donating to the charities bellow.
               Additionally, we do have an optional survey that can help with research targetting Covid-19 hotzones and how to stay safe in this hard times.
               <p/>
-              <Button href="https://docs.google.com/forms/d/e/1FAIpQLSfUJPS7AULEEIGVdYLSQ1oPwPbUFYkT-KswRTIvDx0CH7W4eQ/viewform">
+              <Button color="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfUJPS7AULEEIGVdYLSQ1oPwPbUFYkT-KswRTIvDx0CH7W4eQ/viewform">
                 Survey
               </Button>
             </Typography>

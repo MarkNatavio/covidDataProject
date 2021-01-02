@@ -2,12 +2,14 @@
  * @author  : Leonardo Matone
  * @file    : requestsAPI.js
  * @purpose : to make a request to a given API with specific parameters
- * @date    : 07/17/20 
+ * @date    : 07/17/20
 
-    // basic request for specific endpoint: 
+    // basic request for specific endpoint:
     fetch('https://covidtracking.com/api/v1/us/daily.json')
         .then(response => response.json())
-        .then(data => console.log(data));``
+        .then((data) => {
+          console.log(data)
+        });``
 
     root address : https://covidtracking.com/api
 
@@ -47,18 +49,24 @@ async function request(address, endpoint, key = '') {
     function json(response) {
         return response.json();
     }
+    
+    const DATA = [];
 
     fetch(fullRequest)
         .then(status)
         .then(json)
-        .then(function(data) {
+        .then(data => {
             console.log('request succeeded. JSON response log:', data);
+            DATA.push(data);
             return data;
         })
         .catch(function(error) {
             console.log('request failed. error response log:', error);
         });
+
+    return DATA;
 }
+
 
 //test values
 
@@ -66,6 +74,12 @@ async function request(address, endpoint, key = '') {
 const endpoint = 'v1/us/daily.json' // for testing
 // alert("running with endpoint '"+endpoint+"'");
 
-data = JSON.stringify(request("https://covidtracking.com/api", endpoint, ''));
+data = request("https://covidtracking.com/api", endpoint, '');
 
 console.log(data);
+
+<<<<<<< HEAD
+console.log(data);
+=======
+export default DATA;
+>>>>>>> ced9728c915353a9eb8e7fd1d1bc41206172aad5
